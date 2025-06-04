@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register - Online Bookstore</title>
+  <link href="/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="mb-4">Register</h2>
+    <form action="/register" method="POST" class="w-50 mx-auto">
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input required type="text" class="form-control" id="username" name="username" placeholder="Choose a username" />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input required type="email" class="form-control" id="email" name="email" placeholder="Enter your email" />
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input required type="password" class="form-control" id="password" name="password" placeholder="Create a password" />
+      </div>
+      <div class="mb-3">
+        <label for="street" class="form-label">Street</label>
+        <input type="text" class="form-control" id="street" name="street" placeholder="Street address" />
+      </div>
+      <div class="mb-3">
+        <label for="city" class="form-label">City</label>
+        <input type="text" class="form-control" id="city" name="city" placeholder="City" />
+      </div>
+      <div class="mb-3">
+        <label for="state" class="form-label">State</label>
+        <input type="text" class="form-control" id="state" name="state" placeholder="State" />
+      </div>
+      <div class="mb-3">
+        <label for="zipcode" class="form-label">Zipcode</label>
+        <input type="text" class="form-control" id="zipcode" name="zipcode" placeholder="Zipcode" />
+      </div>
+      <button type="submit" class="btn btn-primary">Register</button>
+      <p class="mt-3">
+        Already have an account? <a href="/login">Login here</a>
+      </p>
+    </form>
+  </div>
+  <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -36,7 +36,7 @@ export async function getDashboardStats() {
   const [[{ userCount }]] = await db.query('SELECT COUNT(*) AS userCount FROM users');
   const [[{ bookCount }]] = await db.query('SELECT COUNT(*) AS bookCount FROM books');
   const [[{ orderCount }]] = await db.query('SELECT COUNT(*) AS orderCount FROM orders');
-  const [[{ totalRevenue }]] = await db.query('SELECT SUM(total) AS totalRevenue FROM orders WHERE status = "delivered"');
+  const [[{ totalRevenue }]] = await db.query('SELECT SUM(total) AS totalRevenue FROM orders WHERE status = \'delivered\'');
   return { userCount, bookCount, orderCount, totalRevenue };
 }
 export async function validateAdminCredentials(username, password) {

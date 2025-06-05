@@ -29,7 +29,7 @@ export async function getAllOrders() {
 }
 
 export async function markOrderDelivered(orderId) {
-  await db.query('UPDATE orders SET status = "delivered" WHERE id = ?', [orderId]);
+  await db.query('UPDATE orders SET status = \'delivered\' WHERE id = ?', [orderId]);
 }
 
 export async function getDashboardStats() {

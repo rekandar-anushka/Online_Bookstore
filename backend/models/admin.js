@@ -1,5 +1,4 @@
 import db from '../config/db.js';
-
 export async function getAllUsers() {
    const sql = 'SELECT id, username, email FROM users where is_admin=0 ORDER BY id';
    const [rows] = await db.query(sql);
@@ -47,7 +46,7 @@ export async function validateAdminCredentials(username, password) {
 }
 export async function deleteUserById(userId) {
   const sql = 'DELETE FROM users WHERE id = ?';
-  const [result] = await pool.query(sql, [userId]);
+  const [result] = await db.query(sql, [userId]);
   return result;
 }
 export async function deleteBookById(bookId) {
